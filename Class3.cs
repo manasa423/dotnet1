@@ -1,27 +1,24 @@
-﻿//factors of anumber
-
+﻿
+//factorial of a number
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp4
+namespace NumberApp
 {
     class Class3
     {
         static void Main(string[] args)
         {
-            int num = 12;
-
-            for (int i = 1; i <= num; i++)
+        
+            int fact = 1;
+            for(int j = 1; j <= 5; j++)
             {
-                if (num % i == 0)
-                {
-                    Console.WriteLine($"{i} are the factors");
-                }
-
-
-
+                fact = fact * j;
+               
             }
+            Console.WriteLine($"fact of i is:{fact}");
+
         }
     }
 }

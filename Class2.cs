@@ -2,28 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Exercise32
+namespace NumberApp
 {
-    public static void Main()
+    class Class2
     {
-
-        int num, i, ctr = 0;
-
-   
-
-        Console.Write("Input  a number: ");
-        num = Convert.ToInt32(Console.ReadLine());
-        for (i = 2; i <= num / 2; i++)
+        static void Main(string[] args)
         {
-            if (num % i == 0)
+            int num=678;
+            int count = 0;
+            while (num > 0)
             {
-                ctr++;
-                break;
+                int digit = num % 10;
+                count++;
+
+                num = num / 10;
+
             }
+            Console.WriteLine($"{ count}");
+
+
         }
-        if (ctr == 0 && num != 1)
-            Console.Write("{0} is a prime number.\n", num);
-        else
-            Console.Write("{0} is not a prime number\n", num);
     }
 }

@@ -1,31 +1,29 @@
-﻿//perfect number
+﻿
+//sum of digits
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-public class Class1
+namespace NumberApp
 {
-    public static void Main()
+    class Class1
     {
-        int n=28, i, sum;
-
-      
-
-        sum = 0;
-        Console.Write("The positive divisor  : ");
-        for (i = 1; i < n; i++)
+        static void Main(string[] args)
         {
-            if (n % i == 0)
+            int n = 120;
+             int sum = 0;
+            while (n > 0)
             {
-                sum = sum + i;
-                Console.Write("{0}  ", i);
+                int m = n % 10;
+                sum = sum + m;
+
+                n = n / 10;
+
             }
+            Console.WriteLine(sum);
+            
+
         }
-        Console.Write("\nThe sum of the divisor is : {0}", sum);
-        if (sum == n)
-            Console.Write("\nSo, the number is perfect.");
-        else
-            Console.Write("\nSo, the number is not perfect.");
-        Console.Write("\n");
     }
 }

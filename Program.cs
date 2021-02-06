@@ -1,26 +1,22 @@
-﻿//strong or not
+﻿using System;
 
-using System;
-
-namespace ConsoleApp4
+namespace NumberApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int n=371, r, sum = 0, temp;
-           
-            temp = n;
-            while (n > 0)
+
+            int i,
+            sum = 0;
+            Console.Write("the first 10 natural numbers are:\n");
+            for (i = 1; i <= 10; i++)
             {
-                r = n % 10;
-                sum = sum + (r * r * r);
-                n = n / 10;
+                sum = sum + i;
+                Console.WriteLine(i);
             }
-            if (temp == sum)
-                Console.Write("Armstrong Number.");
-            else
-                Console.Write("Not Armstrong Number.");
+            Console.WriteLine(sum);
+
         }
     }
 }
